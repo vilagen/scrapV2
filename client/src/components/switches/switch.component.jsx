@@ -1,23 +1,25 @@
 import React from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
+// import { connect } from 'react-redux';
 
-const BGSwitch = (name, color) => {
-  const [state, setState] = React.useState({
-    checkedA: true,
-  });
+// import {toggleDarkModeSwitch} from '../../redux/switches/switches.actions'
 
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
+const BGSwitch = ({switchAction, color}) => {
+  // const [state, setState] = React.useState({
+  //   checkedA: true,
+  // });
+
+  // const handleChange = (event) => {
+  //   setState({ ...state, [event.target.name]: event.target.checked });
+  // };
 
   return (
     <FormControlLabel
       control={
         <Switch
-          checked={state.checkedA}
-          onChange={handleChange}
-          name={name}
+          // checked={state.checkedA}
+          onChange={switchAction}
           color={color}
         />
       }
@@ -26,4 +28,9 @@ const BGSwitch = (name, color) => {
   );
 };
 
+// const mapDispatchToProps = (dispatch) => ({
+//   darkSwitch: () => dispatch(toggleDarkModeSwitch()),
+// })
+
+// export default connect(null, mapDispatchToProps)(BGSwitch);
 export default BGSwitch;
