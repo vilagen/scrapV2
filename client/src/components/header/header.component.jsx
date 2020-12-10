@@ -3,6 +3,7 @@ import Switch from "../switches/switch.component";
 import { connect } from "react-redux";
 // import { createStructuredSelector } from "reselect";
 import { toggleDarkModeSwitch } from "../../redux/switches/switches.actions";
+import Profile from "../Profile/profile.component";
 
 import { makeStyles } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
@@ -18,10 +19,17 @@ const Header = ({ darkSwitch, bgSwitch, primary, ...otherProps }) => {
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100px",
     },
     paper: {
-      height: "50px",
+      height: "100%",
       textAlign: "center",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
       backgroundColor: paperBG,
       color: paperColor,
     },
@@ -30,21 +38,19 @@ const Header = ({ darkSwitch, bgSwitch, primary, ...otherProps }) => {
   const classes = useStyles();
 
   return (
-    <div className={`${classes.root} ${backGround}`}>
-      <Grid container spacing={0}>
-        <Grid item xs={1}>
-          <Switch switchAction={darkSwitch} color={primary} />
-        </Grid>
-
-        <Grid item xs={10}>
-          <Paper className={`${classes.paper}`}> Hi </Paper>
-        </Grid>
-
-        <Grid item xs={1}>
-          <div className={classes.paper}> HI </div>
-        </Grid>
+    <Grid container spacing={0} className={`${classes.root} ${backGround}`}>
+      <Grid item xs={1}>
+        <Switch switchAction={darkSwitch} color={primary} />
       </Grid>
-    </div>
+
+      <Grid item xs={10} style={{ height: "100%" }}>
+        <Paper className={classes.paper}> Hi </Paper>
+      </Grid>
+
+      <Grid item xs={1} className={classes.paper}>
+        <Profile></Profile>
+      </Grid>
+    </Grid>
   );
 };
 

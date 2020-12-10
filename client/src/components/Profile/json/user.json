@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "vilagen",
+      "email": "vilagen@yahoo.com",
+      "first_name": "David",
+      "last_name": "Hart",
+      "phone": [
+        {
+          "regiion": "NA",
+          "number": "555-444-3333"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "vilagen",
+      "email": "vilagen@yahoo.com",
+      "first_name": "David",
+      "last_name": "Hart",
+      "phone": [
+        {
+          "regiion": "NA",
+          "number": "555-444-3333"
+        }
+      ]
+    }
+  ]
+}

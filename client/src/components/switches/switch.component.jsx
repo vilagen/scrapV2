@@ -5,7 +5,7 @@ import Switch from "@material-ui/core/Switch";
 
 // import {toggleDarkModeSwitch} from '../../redux/switches/switches.actions'
 
-const BGSwitch = ({switchAction, color}) => {
+const BGSwitch = ({ switchAction, color }) => {
   // const [state, setState] = React.useState({
   //   checkedA: true,
   // });
